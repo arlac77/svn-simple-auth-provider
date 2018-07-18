@@ -4,29 +4,33 @@ import { reader } from 'kv-reader';
 
 /**
  */
-export SvnSimpleAuthProvider {
+export class SvnSimpleAuthProvider {
+  async provideCredentials(realm) {
+    const fileForRealm = '77f89936954f5731001c65472f2488b7';
 
-  async provideCredentials(realm)
-  {
-    const fileForReam = '77f89936954f5731001c65472f2488b7';
-
-    const fileName = join(process.env.HOME,'.subversion','auth','svn.simple',fileForRealm);
-
-    const kv = await reader(
-      createReadStream(fileName,{encoding: 'utf-8'})
+    const fileName = join(
+      process.env.HOME,
+      '.subversion',
+      'auth',
+      'svn.simple',
+      fileForRealm
     );
 
+    const kv = await reader(createReadStream(fileName, { encoding: 'utf-8' }));
+
+    console.log(kv);
+
     const passtype = kv.get('passtype');
-    switch(passtype) {
+    switch (passtype) {
       default:
       case 'keychain':
         console.log(`Unsupported passtype ${passtype}`);
         return undefined;
-      break;
+        break;
     }
 
     return {
-      user: kv.get('username'),
-    }
+      user: kv.get('username')
+    };
   }
 }
