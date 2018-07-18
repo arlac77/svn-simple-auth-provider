@@ -9,5 +9,6 @@ export default {
     format: 'cjs',
     interop: false
   },
+  external: ['fs', 'path'],
   plugins: [resolve(), commonjs()]
 };
