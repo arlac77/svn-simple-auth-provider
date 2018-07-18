@@ -4,11 +4,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
-  "description": "{{description}}",
-  "keywords": [
-    "npm-package-template"
-  ],
+  "main": "dist/svn-simple-auth-provider.js",
+  "module": "src/svn-simple-auth-provider.mjs",
+  "description": "provide credentials from subversion simple auth",
+  "keywords": ["npm-package-template"],
   "contributors": [
     {
       "name": "Markus Felten",
@@ -23,8 +22,9 @@
     "pretest": "rollup -c tests/rollup.config.js",
     "posttest": "npm run prepare && markdown-doctest",
     "prepare": "rollup -c",
-    "docs": "documentation readme {{module}} --section=API",
-    "lint": "documentation lint {{module}}",
+    "docs":
+      "documentation readme src/svn-simple-auth-provider.mjs --section=API",
+    "lint": "documentation lint src/svn-simple-auth-provider.mjs",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
@@ -46,7 +46,7 @@
     "travis-deploy-once": "^5.0.1"
   },
   "engines": {
-    "node": ">=8.11"
+    "node": ">=10.6"
   },
   "repository": {
     "type": "git",
@@ -57,24 +57,13 @@
   },
   "homepage": "https://github.com/arlac77/svn-simple-auth-provider#readme",
   "ava": {
-    "files": [
-      "build/*-test.js"
-    ],
-    "presets": [
-      "env"
-    ],
-    "require": [
-      "babel-register"
-    ]
+    "files": ["build/*-test.js"],
+    "presets": ["env"],
+    "require": ["babel-register"]
   },
   "nyc": {
-    "include": [
-      "build/*-test.js"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
+    "include": ["build/*-test.js"],
+    "reporter": ["lcov", "text"],
     "report-dir": "./build/coverage"
   },
   "xo": {
