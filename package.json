@@ -1,0 +1,6 @@
+{
+  "name": "svn-simple-auth-provider",
+  "dependencies": {
+    "kv-reader": "^1.0.5"
+  }
+}
