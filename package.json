@@ -1,6 +1,88 @@
 {
   "name": "svn-simple-auth-provider",
+  "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "description": "{{description}}",
+  "keywords": [
+    "npm-package-template"
+  ],
+  "contributors": [
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
+  "license": "BSD-2-Clause",
+  "scripts": {
+    "cover": "nyc --temp-directory build/nyc ava",
+    "precover": "rollup -c tests/rollup.config.js",
+    "test": "ava",
+    "pretest": "rollup -c tests/rollup.config.js",
+    "posttest": "npm run prepare && markdown-doctest",
+    "prepare": "rollup -c",
+    "docs": "documentation readme {{module}} --section=API",
+    "lint": "documentation lint {{module}}",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+  },
   "dependencies": {
     "kv-reader": "^1.0.5"
+  },
+  "devDependencies": {
+    "documentation": "^8.0.1",
+    "markdown-doctest": "^0.9.1",
+    "nyc": "^13.0.0",
+    "ava": "^0.25.0",
+    "rollup": "^0.63.2",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-multi-entry": "^2.0.2",
+    "rollup-plugin-istanbul": "^2.0.1",
+    "rollup-plugin-executable": "^1.2.0",
+    "semantic-release": "^15.8.0",
+    "travis-deploy-once": "^5.0.1"
+  },
+  "engines": {
+    "node": ">=8.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arlac77/svn-simple-auth-provider.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arlac77/svn-simple-auth-provider/issues"
+  },
+  "homepage": "https://github.com/arlac77/svn-simple-auth-provider#readme",
+  "ava": {
+    "files": [
+      "build/*-test.js"
+    ],
+    "presets": [
+      "env"
+    ],
+    "require": [
+      "babel-register"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "build/*-test.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "report-dir": "./build/coverage"
+  },
+  "xo": {
+    "space": true
+  },
+  "template": {
+    "repository": {
+      "url": "https://github.com/arlac77/npm-package-template.git"
+    }
   }
 }
