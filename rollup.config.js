@@ -10,6 +10,6 @@ export default {
     format: 'cjs',
     interop: false
   },
-  external: ['fs', 'path'],
+  external: ['fs', 'path', 'crypto'],
   plugins: [resolve(), commonjs()]
 };
