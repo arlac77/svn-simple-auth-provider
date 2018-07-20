@@ -10,8 +10,8 @@ test('has values', async t => {
     url: new URL(
       'https://subversion.assembla.com/svn/delivery_notes/!svn/rvr/1487/data/environments.json'
     ),
-    Basic: { realm: 'xxx' }
+    Basic: { realm: 'Assembla Restricted Area' }
   });
 
-  t.is(credentials.user, 'xxxx');
+  t.is(credentials.user, 'arlac77');
 });

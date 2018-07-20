@@ -11,7 +11,7 @@ export default {
     sourcemap: true,
     interop: false
   },
-  external: ['ava', 'fs', 'path', 'crypto'],
+  external: ['ava', 'fs', 'path', 'crypto', 'url'],
   plugins: [
     multiEntry(),
     istanbul({
