@@ -4,7 +4,9 @@ import { SvnSimpleAuthProvider } from '../src/svn-simple-auth-provider';
 import { URL } from 'url';
 
 test('has values', async t => {
-  const authProvider = new SvnSimpleAuthProvider();
+  const authProvider = new SvnSimpleAuthProvider({
+    realmDirecotry: join(__dirname, '..', 'tests', 'fixtures')
+  });
 
   const credentials = await authProvider.provideCredentials({
     url: new URL(

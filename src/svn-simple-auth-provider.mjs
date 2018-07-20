@@ -4,14 +4,25 @@ import { createHash } from 'crypto';
 import { reader } from 'kv-reader';
 
 /**
+ * @param {Object} options
+ * @param {string} options.realmDirectory defaults to HOME/.subversion/auth/simple.auth
+ *
+ * @property {string} realmDirectory
  */
 export class SvnSimpleAuthProvider {
+  constructor(options = {}) {
+    Object.defineProperties(this, {
+      realmDirectory: {
+        value:
+          options.realmDirectory ||
+          join(process.env.HOME, '.subversion', 'auth', 'svn.simple')
+      }
+    });
+  }
+
   async provideCredentials(realm) {
     const fileName = join(
-      process.env.HOME,
-      '.subversion',
-      'auth',
-      'svn.simple',
+      this.realmDirectory,
       createHash('md5')
         .update(`<${realm.url.origin}:443> ${realm.Basic.realm}`)
         .digest('hex')
