@@ -3,9 +3,24 @@ import { join } from 'path';
 import { SvnSimpleAuthProvider } from '../src/svn-simple-auth-provider';
 import { URL } from 'url';
 
+test('default realm Dir', t => {
+  const authProvider = new SvnSimpleAuthProvider();
+
+  t.is(
+    authProvider.realmDirectory,
+    join(process.env.HOME, '.subversion', 'auth', 'svn.simple')
+  );
+});
+
+test('given realm Dir', t => {
+  const authProvider = new SvnSimpleAuthProvider({ realmDirectory: '/tmp' });
+
+  t.is(authProvider.realmDirectory, '/tmp');
+});
+
 test('has values', async t => {
   const authProvider = new SvnSimpleAuthProvider({
-    realmDirecotry: join(__dirname, '..', 'tests', 'fixtures')
+    realmDirectory: join(__dirname, '..', 'tests', 'fixtures')
   });
 
   const credentials = await authProvider.provideCredentials({
