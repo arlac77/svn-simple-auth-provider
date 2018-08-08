@@ -12,5 +12,5 @@ export default {
     interop: false
   },
   external: ['fs', 'path', 'crypto'],
-  plugins: [resolve(), commonjs()]
+  plugins: [resolve(), commonjs(), cleanup()]
 };
