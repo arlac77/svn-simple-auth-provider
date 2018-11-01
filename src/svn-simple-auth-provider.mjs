@@ -1,7 +1,7 @@
-import { join } from 'path';
-import { createReadStream } from 'fs';
-import { createHash } from 'crypto';
-import { reader } from 'kv-reader';
+import { join } from "path";
+import { createReadStream } from "fs";
+import { createHash } from "crypto";
+import { reader } from "kv-reader";
 
 /**
  * @param {Object} options
@@ -15,7 +15,7 @@ export class SvnSimpleAuthProvider {
       realmDirectory: {
         value:
           options.realmDirectory ||
-          join(process.env.HOME, '.subversion', 'auth', 'svn.simple')
+          join(process.env.HOME, ".subversion", "auth", "svn.simple")
       }
     });
   }
@@ -23,20 +23,22 @@ export class SvnSimpleAuthProvider {
   async provideCredentials(realm) {
     const fileName = join(
       this.realmDirectory,
-      createHash('md5')
+      createHash("md5")
         .update(`<${realm.url.origin}:443> ${realm.Basic.realm}`)
-        .digest('hex')
+        .digest("hex")
     );
 
-    const kv = await reader(createReadStream(fileName, { encoding: 'utf-8' }));
+    const kv = {};
 
-    console.log(kv);
-    //console.log(kv instanceof Map);
+    await reader(
+      createReadStream(fileName, { encoding: "utf-8" }),
+      (key, value) => (kv[key] = value)
+    );
 
     const passtype = kv.passtype;
     switch (passtype) {
       default:
-      case 'keychain':
+      case "keychain":
         console.log(`Unsupported passtype ${passtype}`);
         break;
     }
