@@ -28,7 +28,7 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "dependencies": {
-    "kv-reader": "^2.0.0"
+    "kv-reader": "^2.0.2"
   },
   "devDependencies": {
     "ava": "^1.0.0-rc.2",
