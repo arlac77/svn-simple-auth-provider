@@ -8,7 +8,6 @@
   "module": "src/svn-simple-auth-provider.mjs",
   "description": "provide credentials from subversion simple auth",
   "keywords": [
-    "npm-package-template",
     "auth-provider"
   ],
   "contributors": [
