@@ -1,6 +1,6 @@
 import test from "ava";
 import { join } from "path";
-import { SvnSimpleAuthProvider } from "../src/svn-simple-auth-provider";
+import { SvnSimpleAuthProvider } from "../src/svn-simple-auth-provider.mjs";
 
 test("default realm Dir", t => {
   const authProvider = new SvnSimpleAuthProvider();
