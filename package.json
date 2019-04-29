@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/svn-simple-auth-provider.js",
+  "main": "src/svn-simple-auth-provider.mjs",
   "module": "src/svn-simple-auth-provider.mjs",
   "description": "provide credentials from subversion simple auth",
   "keywords": [

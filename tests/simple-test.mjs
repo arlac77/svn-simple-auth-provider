@@ -1,6 +1,11 @@
 import test from "ava";
-import { join } from "path";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+import { tmpdir } from "os";
+
 import { SvnSimpleAuthProvider } from "../src/svn-simple-auth-provider.mjs";
+
+const here = dirname(fileURLToPath(import.meta.url));
 
 test("default realm Dir", t => {
   const authProvider = new SvnSimpleAuthProvider();
@@ -19,7 +24,7 @@ test("given realm Dir", t => {
 
 test("has values", async t => {
   const authProvider = new SvnSimpleAuthProvider({
-    realmDirectory: join(__dirname, "..", "tests", "fixtures")
+    realmDirectory: join(here, "..", "tests", "fixtures")
   });
 
   const credentials = await authProvider.provideCredentials({
