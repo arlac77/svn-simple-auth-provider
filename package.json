@@ -21,29 +21,22 @@
     "cover": "c8 --temp-directory build/coverage ava && c8 report -r lcov --temp-directory build/coverage",
     "docs": "documentation readme src/svn-simple-auth-provider.mjs --section=API",
     "lint": "documentation lint src/svn-simple-auth-provider.mjs",
-    "posttest": "npm run prepare && markdown-doctest",
-    "prepare": "rollup -c",
+    "posttest": "markdown-doctest && npm run prepare",
     "test": "ava"
   },
   "dependencies": {
     "kv-reader": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "^1.0.1",
-    "c8": "^3.2.1",
-    "documentation": "^9.1.1",
-    "esm": "^3.0.84",
+    "ava": "^1.4.1",
+    "c8": "^3.5.0",
+    "documentation": "^10.1.0",
+    "esm": "^3.2.22",
     "markdown-doctest": "^0.9.1",
-    "rollup": "^1.1.0",
-    "rollup-plugin-cleanup": "^3.1.0",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-executable": "^1.3.0",
-    "rollup-plugin-json": "^3.1.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "semantic-release": "^15.13.2"
+    "semantic-release": "^15.13.12"
   },
   "engines": {
-    "node": ">=10.15.0"
+    "node": ">=10.15.3"
   },
   "repository": {
     "type": "git",
@@ -70,7 +63,7 @@
   },
   "template": {
     "repository": {
-      "url": "https://github.com/arlac77/npm-package-template.git"
+      "url": "https://github.com/arlac77/npm-package-template-esm-only.git"
     }
   }
 }
