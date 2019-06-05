@@ -1,7 +1,6 @@
 import test from "ava";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
-import { tmpdir } from "os";
 
 import { SvnSimpleAuthProvider } from "../src/svn-simple-auth-provider.mjs";
 
