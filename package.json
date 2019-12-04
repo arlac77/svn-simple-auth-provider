@@ -1,10 +1,11 @@
 {
   "name": "svn-simple-auth-provider",
   "version": "0.0.0-semantic-release",
-  "type": "module",
   "publishConfig": {
     "access": "public"
   },
+  "sideEffects": false,
+  "type": "module",
   "main": "src/svn-simple-auth-provider.mjs",
   "module": "src/svn-simple-auth-provider.mjs",
   "description": "provide credentials from subversion simple auth",
@@ -64,6 +65,5 @@
     "repository": {
       "url": "https://github.com/arlac77/npm-package-template-esm-only.git"
     }
-  },
-  "sideEffects": false
+  }
 }
