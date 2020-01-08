@@ -24,7 +24,8 @@
     "docs": "documentation readme src/svn-simple-auth-provider.mjs --section=API",
     "lint": "documentation lint src/svn-simple-auth-provider.mjs",
     "posttest": "markdown-doctest",
-    "test": "ava"
+    "test": "ava",
+    "prepare": "rollup -c"
   },
   "dependencies": {
     "kv-reader": "^3.0.0"
@@ -38,7 +39,7 @@
     "semantic-release": "^15.14.0"
   },
   "engines": {
-    "node": ">=12.14.0"
+    "node": ">=12.14.1"
   },
   "repository": {
     "type": "git",
