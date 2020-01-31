@@ -1,0 +1,10 @@
+{
+  "name": "svn-simple-auth-provider",
+  "description": "provide credentials from subversion simple auth",
+  "icons": [
+    {
+      "src": "facicon.ico",
+      "sizes": "16x16"
+    }
+  ]
+}
