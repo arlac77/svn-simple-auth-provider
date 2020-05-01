@@ -7,6 +7,9 @@
   "sideEffects": false,
   "type": "module",
   "main": "src/svn-simple-auth-provider.mjs",
+  "exports": {
+    ".": "./src/svn-simple-auth-provider.mjs"
+  },
   "description": "provide credentials from subversion simple auth",
   "keywords": [
     "auth-provider"
