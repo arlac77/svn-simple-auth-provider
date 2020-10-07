@@ -6,7 +6,7 @@
   },
   "sideEffects": false,
   "type": "module",
-  "main": "src/svn-simple-auth-provider.mjs",
+  "main": "./src/svn-simple-auth-provider.mjs",
   "exports": {
     ".": "src/svn-simple-auth-provider.mjs"
   },
