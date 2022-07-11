@@ -1,6 +1,5 @@
 import test from "ava";
 import { join } from "path";
-
 import { SvnSimpleAuthProvider } from "svn-simple-auth-provider";
 
 test("default realm Dir", t => {
