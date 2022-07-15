@@ -1,6 +1,6 @@
 [![npm](https://img.shields.io/npm/v/svn-simple-auth-provider.svg)](https://www.npmjs.com/package/svn-simple-auth-provider)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-[![minified size](https://badgen.net/bundlephobia/min/svn-simple-auth-provider)](https://bundlephobia.com/result?p=svn-simple-auth-provider)
+[![Open Bundle](https://bundlejs.com/badge-light.svg)](https://bundlejs.com/?q=svn-simple-auth-provider)
 [![downloads](http://img.shields.io/npm/dm/svn-simple-auth-provider.svg?style=flat-square)](https://npmjs.org/package/svn-simple-auth-provider)
 [![GitHub Issues](https://img.shields.io/github/issues/arlac77/svn-simple-auth-provider.svg?style=flat-square)](https://github.com/arlac77/svn-simple-auth-provider/issues)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farlac77%2Fsvn-simple-auth-provider%2Fbadge\&style=flat)](https://actions-badge.atrox.dev/arlac77/svn-simple-auth-provider/goto)
