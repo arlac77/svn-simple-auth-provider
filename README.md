@@ -33,7 +33,7 @@ provide credentials from subversion simple auth
 
 ### Properties
 
-*   `realmDirectory` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+*   `realmDirectory` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 
 # install
 
