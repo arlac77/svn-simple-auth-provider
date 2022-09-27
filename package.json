@@ -28,7 +28,7 @@
     "lint:docs": "documentation lint ./src/**/*.mjs"
   },
   "dependencies": {
-    "kv-reader": "^3.1.0"
+    "kv-reader": "^3.2.0"
   },
   "devDependencies": {
     "ava": "^5.0.0",
