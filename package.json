@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arlac77/svn-simple-auth-provider"
+    "url": "git+https://github.com/arlac77/svn-simple-auth-provider.git"
   },
   "bugs": {
     "url": "https://github.com/arlac77/svn-simple-auth-provider/issues"
