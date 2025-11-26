@@ -47,7 +47,7 @@
   "bugs": {
     "url": "https://github.com/arlac77/svn-simple-auth-provider/issues"
   },
-  "homepage": "https://github.com/arlac77/svn-simple-auth-provider#readme",
+  "homepage": "",
   "template": {
     "inheritFrom": [
       "arlac77/template-arlac77-github",
